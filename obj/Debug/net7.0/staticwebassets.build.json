@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "xpw578RiK+gy9+bIHVOFZMs1WP1rm5jOtrtyilaiZF8=",
-  "Source": "ConsoleApp1",
-  "BasePath": "_content/ConsoleApp1",
+  "Hash": "wI1mG3encjxoLIO/IM5Vx6+X8fifzfnKMUqBhPQM2bI=",
+  "Source": "AuthSample",
+  "BasePath": "_content/AuthSample",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
