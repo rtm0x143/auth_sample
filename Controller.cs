@@ -1,9 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Authorization.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ConsoleApp1;
+namespace AuthSample;
 
 [ApiController]
 public class MyController : ControllerBase
@@ -15,17 +15,17 @@ public class MyController : ControllerBase
         _service = service;
     }
 
-    [Authorize("MyPolicy", AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]
-    [HttpPost("/route")]
+    [Authorize("MyPolicy", AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [HttpGet("/method-with-attribute")]
     public string MyMethod()
     {
         return "Hello World";
     }
 
+    [HttpGet("method-with-service")]
     public async Task<IActionResult> MethodWithService()
     {
-        var result = await _service.AuthorizeAsync(User, null,
-            new AssertionRequirement(context => context.User.Identity?.Name == "rtm0x143"));
+        var result = await _service.AuthorizeAsync(User, null, "MyPolicy");
 
         if (!result.Succeeded) return new StatusCodeResult(StatusCodes.Status403Forbidden);
 
