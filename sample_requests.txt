@@ -1,0 +1,5 @@
+﻿curl http://localhost:8080/method-with-attribute -Headers @{ "Authorization" = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoX3NhbXBsZSIsImF1ZCI6ImF1dGhfc2FtcGxlIiwiaWF0IjoxNjk5NDk4NTgxLCJleHAiOjE2OTk1MDU5NjEsInJvbGUiOiJhZG1pbiIsImNsYWltVHlwZSI6ImNsYWltVmFsdWUxIn0.GNPJU9R5L6iKymEoLUIGahJNDZras44i9YOXjYVIxyY" }
+
+curl http://localhost:8080/method-with-service -Headers @{ "Authorization" = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoX3NhbXBsZSIsImF1ZCI6ImF1dGhfc2FtcGxlIiwiaWF0IjoxNjk5NDk4NTgxLCJleHAiOjE2OTk1MDU5NjEsInJvbGUiOiJhZG1pbiIsImNsYWltVHlwZSI6ImNsYWltVmFsdWUxIn0.GNPJU9R5L6iKymEoLUIGahJNDZras44i9YOXjYVIxyY" }
+
+curl http://localhost:8080/method-with-service -Headers @{ "Authorization" = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoX3NhbXBsZSIsImF1ZCI6ImF1dGhfc2FtcGxlIiwic3ViIjoiMTIzNDU2Nzg5MCIsIm5hbWUiOiJKb2huIERvZSIsImlhdCI6MTUxNjIzOTAyMiwicm9sZSI6Im5lX2FkbWluIn0.IS9dtuwO4IK4pnpax-2Xmr9Bqh6FAVE3lhi4j6j3mU0" }
